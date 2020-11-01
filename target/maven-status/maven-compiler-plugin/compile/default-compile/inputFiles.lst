@@ -1,0 +1,15 @@
+C:\Users\santa500\Desktop\Thoughtworks\battleship\src\main\java\org\game\battleship\domain\Player.java
+C:\Users\santa500\Desktop\Thoughtworks\battleship\src\main\java\org\game\battleship\domain\BattleShipGame.java
+C:\Users\santa500\Desktop\Thoughtworks\battleship\src\main\java\org\game\battleship\domain\Result.java
+C:\Users\santa500\Desktop\Thoughtworks\battleship\src\main\java\org\game\battleship\setup\GameSetup.java
+C:\Users\santa500\Desktop\Thoughtworks\battleship\src\main\java\org\game\battleship\validators\GameSetupValidator.java
+C:\Users\santa500\Desktop\Thoughtworks\battleship\src\main\java\org\game\battleship\domain\ShipType.java
+C:\Users\santa500\Desktop\Thoughtworks\battleship\src\main\java\org\game\battleship\exceptions\InvalidGameSetupException.java
+C:\Users\santa500\Desktop\Thoughtworks\battleship\src\main\java\org\game\battleship\domain\Cell.java
+C:\Users\santa500\Desktop\Thoughtworks\battleship\src\main\java\org\game\battleship\common\ErrorConstants.java
+C:\Users\santa500\Desktop\Thoughtworks\battleship\src\main\java\org\game\battleship\runner\BattleShipGameRunner.java
+C:\Users\santa500\Desktop\Thoughtworks\battleship\src\main\java\org\game\battleship\domain\BattleShip.java
+C:\Users\santa500\Desktop\Thoughtworks\battleship\src\main\java\org\game\battleship\exceptions\AreaAlreadyOccupiedException.java
+C:\Users\santa500\Desktop\Thoughtworks\battleship\src\main\java\org\game\battleship\exceptions\InputFileNotFoundException.java
+C:\Users\santa500\Desktop\Thoughtworks\battleship\src\main\java\org\game\battleship\parser\LocationParser.java
+C:\Users\santa500\Desktop\Thoughtworks\battleship\src\main\java\org\game\battleship\domain\BattleArea.java

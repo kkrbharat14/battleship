@@ -1,0 +1,7 @@
+org\game\battleship\domain\BattleAreaTest.class
+org\game\battleship\parser\LocationParserTest.class
+org\game\battleship\validators\GameSetupValidatorTest.class
+org\game\battleship\setup\GameSetupTest.class
+org\game\battleship\domain\BattleShipTest.class
+org\game\battleship\domain\BattleShipGameTest.class
+org\game\battleship\AllTests.class

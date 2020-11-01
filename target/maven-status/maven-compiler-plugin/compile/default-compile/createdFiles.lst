@@ -1,0 +1,15 @@
+org\game\battleship\domain\BattleArea.class
+org\game\battleship\runner\BattleShipGameRunner.class
+org\game\battleship\domain\Player.class
+org\game\battleship\domain\BattleShipGame.class
+org\game\battleship\domain\Cell.class
+org\game\battleship\exceptions\InputFileNotFoundException.class
+org\game\battleship\domain\ShipType.class
+org\game\battleship\domain\BattleShip.class
+org\game\battleship\parser\LocationParser.class
+org\game\battleship\domain\Result.class
+org\game\battleship\setup\GameSetup.class
+org\game\battleship\exceptions\AreaAlreadyOccupiedException.class
+org\game\battleship\exceptions\InvalidGameSetupException.class
+org\game\battleship\validators\GameSetupValidator.class
+org\game\battleship\common\ErrorConstants.class
