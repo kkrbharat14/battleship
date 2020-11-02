@@ -4,8 +4,6 @@ import java.awt.Dimension;
 import java.awt.Point;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
-import java.util.stream.Stream;
 
 import org.game.battleship.common.ErrorConstants;
 import org.game.battleship.exceptions.AreaAlreadyOccupiedException;
@@ -16,7 +14,6 @@ public class BattleArea {
 	private List<Cell> allCells;
 	private int battleAreahealth;
 
-	private static final Logger LOGGER = Logger.getLogger(BattleArea.class.getName());
 
 	/**
 	 * @param Dimension Creates Battle area with specified Dimension Initializes
@@ -40,14 +37,6 @@ public class BattleArea {
 		});
 	}
 
-	/**
-	 * @param targetLocations These are targets to attack,reduces battle area health
-	 *                        if hit is successful.
-	 */
-	public void handleAttacks(String[] targetLocations) {
-		Stream.of(targetLocations).forEach(this::handleAttack);
-	}
-
 	public int getBattleAreahealth() {
 		return battleAreahealth;
 	}
@@ -63,21 +52,25 @@ public class BattleArea {
 	public void setAllCells(List<Cell> allCells) {
 		this.allCells = allCells;
 	}
-
-	private void handleAttack(String targetLocation) {
+	/**
+	 * @return true if hits target
+	 * */
+	public boolean handleAttack(String playerName,String targetLocation) {
 		Point targetPoint = LocationParser.parseLocation(targetLocation);
 		Cell targetCell = allCells.stream().filter(c -> new Cell(targetPoint).equals(c) && c.isOccupied()).findFirst()
 				.orElse(null);
 
 		if (targetCell == null) {
-			LOGGER.info("Missed: No Damage caused");
+			System.out.println(playerName+ " fires a missile with target "+targetLocation+" which got miss");
 		} else if (targetCell.getMissilesHit() < targetCell.getMissilesHitThreshold()) {
+			System.out.println(playerName+ " fires a missile with target "+targetLocation+" which got hit");
 			targetCell.setMissilesHit(targetCell.getMissilesHit() + 1);
 			battleAreahealth = battleAreahealth - 1;
-			LOGGER.info("Successful Hit: BattleArea Health Reduced");
+			return true;
 		} else {
-			LOGGER.info("Target location Already Destroyed");
+			System.out.println("Target location Already Destroyed");
 		}
+		return false;
 
 	}
 

@@ -48,7 +48,9 @@ public class BattleAreaTest {
 		battleShips.add(battleShip);
 
 		battleArea.placeShips(battleShips);
-		battleArea.handleAttacks(new String[] {"A2","B3","C3"});
+		battleArea.handleAttack("player","A2");
+		battleArea.handleAttack("player","B3");
+		battleArea.handleAttack("player","C3");
 		
 		assertEquals(2, battleArea.getBattleAreahealth());
 	}
@@ -61,7 +63,12 @@ public class BattleAreaTest {
 		battleShips.add(battleShip);
 
 		battleArea.placeShips(battleShips);
-		battleArea.handleAttacks(new String[] {"A2","A1","C3","A5","A2","A1"});
+		battleArea.handleAttack("player","A2");
+		battleArea.handleAttack("player","A1");
+		battleArea.handleAttack("player","C3");
+		battleArea.handleAttack("player","A5");
+		battleArea.handleAttack("player","A2");
+		battleArea.handleAttack("player","A1");
 		
 		assertEquals(0, battleArea.getBattleAreahealth());
 	}
